@@ -35,7 +35,7 @@ export const abi = [
   },
   {
     inputs: [],
-    name: "numAddresseseWhitelisted",
+    name: "numAddressesWhitelisted",
     outputs: [
       {
         internalType: "uint8",
