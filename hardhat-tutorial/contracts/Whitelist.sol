@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.0;
 
 contract Whitelist {
     // max number of addresses which can be whitelisted
     uint8 public maxWhitelistedAddresses;
 
     // keep track of number of addresses whitelisted till now
-    uint8 public numAddresseseWhitelisted;
+    uint8 public numAddressesWhitelisted;
 
     // map which keeps track whether the current address is whitelisted or not
     mapping(address => bool) public whitelistedAddresses;
@@ -23,11 +23,11 @@ contract Whitelist {
             "Sender already in the whitelist"
         );
         require(
-            numAddresseseWhitelisted < maxWhitelistedAddresses,
+            numAddressesWhitelisted < maxWhitelistedAddresses,
             "Max limit reached"
         );
 
         whitelistedAddresses[msg.sender] = true;
-        numAddresseseWhitelisted += 1;
+        numAddressesWhitelisted += 1;
     }
 }
